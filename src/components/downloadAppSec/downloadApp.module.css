@@ -1,0 +1,51 @@
+.downloadApp__handler{
+    background-image: url('../../assets/chooseUs/Vector.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    margin-top: 60px;
+}
+.downloadApp__image img{
+    width: 468.66px;
+}
+.downloadLinks{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.downloadLinks img{
+    width: 174.87px;
+    height: 51.74px;
+}
+.downloadApp__text h5{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 57.6px;
+}
+.downloadApp__text h5 span{
+    color: rgba(21, 114, 211, 1);
+}
+.downloadApp__text p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+@media screen and (max-width: 992px) {
+    .downloadApp__image img{
+        width: 350px;
+    }
+    .downloadLinks img{
+        width: 120px;
+        height: 31px;
+    }
+    .downloadApp__text h5{
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+@media screen and (max-width: 600px){
+    .downloadApp__text{
+        margin-bottom: 30px;
+    }
+}
+

@@ -1,0 +1,30 @@
+.workingSteps{
+    margin: 60px 0;
+}
+.workingStepItem{
+    text-align: center;
+}
+.workingStepItem img{
+    width: 112px;
+    height: 112px;
+    margin-bottom: 30px;
+}
+.workingStepItem h5{
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #000;
+}
+.workingStepItem p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #6D6D6D;
+}
+
+@media screen and (max-width: 992px) {
+    .workingStepItem h5{
+        font-size: 16px;
+    }
+}

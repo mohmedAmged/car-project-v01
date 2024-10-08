@@ -1,0 +1,79 @@
+.productCarCard__info{
+    box-shadow: 0px 12px 24px 0px #104C8B29;
+    border-radius: 16px;
+    padding: 10px;
+}
+.productImg{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.productImg img{
+    width: 208px;
+    height: 104px;
+}
+.productCarCard__info h5{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 17px;
+    color: #262626;
+}
+.productReview{
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 17px;
+    color: #262626;
+    display: flex;
+    gap: 2px;
+}
+.productReview span{
+    color: #808080;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 17px;
+}
+.productReview i{
+    color: #EFBF14;
+    margin-right: 2px;
+}
+.listedFutures{
+    margin: 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.listedFutureItem img{
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+}
+.listedFutureItem span{
+    font-size: 10px;
+}
+.productPrice{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.productPrice h5{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 17px;
+    color: #595959;
+}
+.TotPrice{
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-transform: capitalize;
+    line-height: 17px;
+    color: #000 !important;
+}
+.btnSubmit{
+    text-align: center;
+    padding: 20px 25px !important;
+    cursor: pointer;
+}

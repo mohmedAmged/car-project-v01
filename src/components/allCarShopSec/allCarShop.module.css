@@ -1,0 +1,19 @@
+.carHome__search{
+    display: flex;
+    gap: 12px;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: 0px 6px 12px 0px #135EAC1F;
+    border-radius: 12px;
+    padding: 8px;
+}
+.carHome__search img{
+    width: 32px;
+    height: 32px;
+}
+.carHome__search input{
+    border: 0;
+}
+.carHome__search button{
+    padding: 6px 25px !important;
+}

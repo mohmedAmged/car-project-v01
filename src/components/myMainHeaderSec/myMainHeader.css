@@ -1,0 +1,37 @@
+.mainHeaderSec__handler{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    margin-top: 50px;
+}
+.mainHeaderSec__handler.reStyle{
+    text-align: start;
+}
+.subTitle_item{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.subTitle_item.reStyle{
+    justify-content: start;
+}
+.subTitle_item p{
+background-color: #1572D31A;
+padding: 16px 32px;
+border-radius: 8px;
+text-align: center;
+color: #1572D3;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+text-transform: uppercase;
+}
+.mainHeaderSec__handler h1{
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 49.4px;
+    text-transform: capitalize;
+    color: #333333;
+}

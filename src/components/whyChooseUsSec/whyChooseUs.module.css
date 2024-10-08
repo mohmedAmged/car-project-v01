@@ -1,0 +1,74 @@
+.whyChooseUs__handler{
+    background-image: url('../../assets/chooseUs/Vector.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+.advItems{
+    padding-right: 90px;
+    margin-top: 30px;
+}
+.advItem{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.advItem img{
+    width: 64px;
+    height: 64px;
+}
+.advItem_text h5{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #000;
+}
+.advItem_text p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #6D6D6D;
+    
+}
+@media screen and (max-width: 992px) {
+    .advItem_text h5{
+        font-size: 16px;
+    }
+    .advItem_text p{
+        font-size: 12px;
+    }
+    .advItems{
+        padding-right: 40px;
+    }
+    .advItem img{
+        width: 48px;
+        height: 48px;
+    }
+    .whyChooseUs__handler{
+        background-size: 70%;  
+    }
+}
+@media screen and (max-width: 600px){
+    .reStyleRow{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .whyChooseUs__handler{
+        background-image: none;
+    }
+    .carImage_box{
+        background-image: url('../../assets/chooseUs/Vector.png');
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding: 40px 0;
+    }
+    .advItems{
+        padding-right: 0;
+        padding-left: 30px;
+    }
+    .addPadding{
+        padding-left: 30px;
+    }
+}

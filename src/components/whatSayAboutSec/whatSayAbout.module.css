@@ -1,0 +1,86 @@
+.whatSayAbout__handler{
+    padding: 60px 0;
+    background-color: rgba(247, 251, 255, 1);
+}
+.whatSayAbout__slider{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.sliderItem{
+    display: flex;
+    box-shadow: 0px 12px 24px 0px rgba(16, 76, 139, 0.16);
+    gap: 20px;
+    align-items: center;
+    border-radius: 24px;
+    width: 520px;
+    background: #fff;
+}
+.sliderImg{
+    width: 50%;
+    height: 338px;
+}
+.sliderImg img{
+    width: 100%;
+    height: 100%;
+}
+.sliderItemText{
+    width: 40%;
+}
+.itemReview h5{
+    font-size: 64px;
+    font-weight: 500;
+    color: rgba(56, 56, 56, 1);
+}
+.itemReview h5 span{
+    font-size: 24px;
+
+}
+.stars{
+    display: flex;
+    gap: 2px;
+    margin-bottom: 20px;
+}
+.stars i{
+   color: rgba(239, 191, 20, 1);
+}
+.itemReview p{
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.itemReview h4{
+    font-size: 20px;
+    font-weight: 500;
+}
+.location{
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: rgba(131, 131, 131, 1);
+}
+
+@media screen and (max-width: 600px) {
+    .sliderItem{
+        width: 400px;
+    gap: 10px;
+    }
+    .itemReview h5{
+        font-size: 18px;
+    }
+    .itemReview h5 span{
+        font-size: 14px;
+    }
+    .itemReview h4{
+        font-size: 16px;
+    }
+    .itemReview p{
+        font-size: 10px;
+    }
+    .location{
+        font-size: 8px;
+    }
+    .sliderImg{
+        width: 40%;
+        height: 238px;
+    }
+}
