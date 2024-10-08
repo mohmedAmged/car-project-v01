@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css'
 import MyFooter from './components/myFooterSec/MyFooter'
 import MyLayout from './components/myLayoutSecc/MyLayout'
-import MyNavBar from './components/myNavBarSecc/MyNavbar'
+import MyNavBar from './components/myNavBarSecc/MyNavBar'
 function App() {
 
   const [scrollToggle, setScrollToggle] = useState(false);
