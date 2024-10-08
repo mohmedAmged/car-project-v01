@@ -1,5 +1,5 @@
 import './App.css'
-import MyLayout from './components/myLayoutSec/MyLayout'
+import MyLayout from './components/myLayoutSecc/MyLayout'
 function App() {
 
 
