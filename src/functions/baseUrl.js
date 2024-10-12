@@ -1,1 +1,1 @@
-export const baseURL = 'https://freetestapi.com/api/v1';
+export const baseURL = 'https://myfakeapi.com/api';

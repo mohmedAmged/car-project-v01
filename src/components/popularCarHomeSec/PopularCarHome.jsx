@@ -38,8 +38,9 @@ export default function PopularCarHome() {
 
     const fetchCars = async () => {
         try {
-            const response = await axios.get(`${baseURL}/cars?limit=5&t=${new Date().getTime()}`);
-            setCarData(response?.data);
+            const response = await axios.get(`${baseURL}/cars?t=${new Date().getTime()}`);
+            setCarData(response?.data?.cars);
+            
         } catch (error) {
             toast.error(error?.response?.data.message || 'Something Went Wrong!');
         };
@@ -50,7 +51,7 @@ export default function PopularCarHome() {
         if (urlParams) {
             await axios.get(`${baseURL}/cars?${urlParams}&t=${new Date().getTime()}`)
                 .then(res => {
-                    setCarData(res?.data);
+                    setCarData(res?.data?.cars);
                 })
                 .catch(err => {
                     toast.error(err?.response?.data?.message || 'Something Went Wrong!');
@@ -72,6 +73,8 @@ export default function PopularCarHome() {
     useEffect(() => {
         fetchCars();
     }, []);
+    console.log(carData);
+    
     return (
         <div className={`${styles.popularCarHome__handler}`}>
             <div className="container">
@@ -104,7 +107,7 @@ export default function PopularCarHome() {
                             {
                                 carData?.slice(0, 4)?.map((el, i) => (
                                     <div key={el?.id} className="col-lg-3 col-md-6 mb-5">
-                                        <ProductCarCard prodImg={carImages[i]} prodNameMake={el?.make} prodNameModel={el?.model} prodPrice={el?.price} />
+                                        <ProductCarCard prodImg={carImages[i]} prodNameMake={el?.car} prodNameModel={el?.car_model} prodPrice={el?.price} />
                                     </div>
                                 ))
                             }

@@ -56,7 +56,7 @@ export default function ProductCarCard({prodImg, prodNameMake, prodNameModel, pr
                     Price
                 </h5>
                 <h5 className={`${styles.TotPrice}`}>
-                    ${prodPrice}
+                    {prodPrice}
                 </h5>
             </div>
             <div className={`${styles.btnSubmit} mainBtnBlueStyle`}>

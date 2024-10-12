@@ -54,11 +54,11 @@ export default function AllCarShop() {
     const fetchCars = async () => {
         try {
             const response = await axios.get(`${baseURL}/cars?t=${new Date().getTime()}`);
-            const fetchedCars = response?.data;
+            const fetchedCars = response?.data?.cars;
             setAllCarsData(fetchedCars);
             const totalCars = fetchedCars.length;
             setTotalPages(Math.ceil(totalCars / carsPerPage));
-            setCarData(fetchedCars.slice(0, carsPerPage));
+            setCurrentPage(1);
         } catch (error) {
             toast.error(error?.response?.data.message || 'Something Went Wrong!');
         };
@@ -71,13 +71,15 @@ export default function AllCarShop() {
             const endIndex = startIndex + carsPerPage;
             setCarData(allCarsData.slice(startIndex, endIndex));
         }
+        
     };
+    
     const filterCars = async () => {
         const urlParams = objectToParams(filteration);
         if (urlParams) {
             await axios.get(`${baseURL}/cars?${urlParams}&t=${new Date().getTime()}`)
                 .then(res => {
-                    setCarData(res?.data);
+                    setCarData(res?.data?.cars);
                 })
                 .catch(err => {
                     toast.error(err?.response?.data?.message || 'Something Went Wrong!');
@@ -91,14 +93,19 @@ export default function AllCarShop() {
         setFilteration({ ...filteration, [e.target.name]: e.target.value });
     };
 
-
+    useEffect(() => {
+        fetchCars();
+    }, []);
+    
     useEffect(() => {
         filterCars();
     }, [filteration]);
 
     useEffect(() => {
-        fetchCars(currentPage);
-    }, [currentPage]);
+        const startIndex = (currentPage - 1) * carsPerPage;
+        const endIndex = startIndex + carsPerPage;
+        setCarData(allCarsData.slice(startIndex, endIndex));
+    }, [currentPage, allCarsData]);
     return (
         <div className={`${styles.allCarShop__handler}`}>
             <div className="container">
@@ -131,7 +138,7 @@ export default function AllCarShop() {
                             {
                                 carData?.map((el, i) => (
                                     <div key={el?.id} className="col-lg-3 col-md-6 mb-5">
-                                        <ProductCarCard prodImg={carImages[i]} prodNameMake={el?.make} prodNameModel={el?.model} prodPrice={el?.price} />
+                                        <ProductCarCard prodImg={carImages[i]} prodNameMake={el?.car} prodNameModel={el?.car_model} prodPrice={el?.price} />
                                     </div>
                                 ))
                             }
@@ -157,17 +164,14 @@ export default function AllCarShop() {
                                 Previous
                             </button>
                         </li>
-                        {[...Array(totalPages)].map((_, index) => (
-                            <li key={index} className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}>
-                                <button
-                                    className="page-link"
-                                    onClick={() => handlePageChange(index + 1)}
-                                >
-                                    {index + 1}
-                                </button>
-                            </li>
-                        ))}
-                        <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+                        <li>
+                            <button
+                                className="page-link"
+                                    >
+                                    {currentPage}
+                            </button>
+                        </li>
+                        <li onClick={() => handlePageChange(currentPage + 1)} className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
                             <button
                                 className="page-link"
                                 onClick={() => handlePageChange(currentPage + 1)}
